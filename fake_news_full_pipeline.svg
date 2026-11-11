@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1344 470" width="1344" height="470" font-family="Segoe UI, Helvetica, Arial, sans-serif" xmlns:c2pa="http://c2pa.org/manifest">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0 L0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.6"/>
+    </pattern>
+  </defs>
+
+  <!-- card background -->
+  <rect x="12" y="12" width="1320" height="446" rx="18" fill="url(#bg)"/>
+  <rect x="12" y="12" width="1320" height="446" rx="18" fill="url(#grid)" opacity="0.6"/>
+
+  <!-- title -->
+  <text x="44" y="52" font-size="22" font-weight="700" fill="#f8fafc">Multilingual Fake News Detection</text>
+  <text x="44" y="76" font-size="14" fill="#94a3b8">Pipeline: input → language → preprocess → baseline + deep models → ensemble → verdict</text>
+
+  <!-- lane labels -->
+  <text x="408" y="122" font-size="12" font-weight="600" fill="#fdba74">Baseline ML</text>
+  <text x="408" y="266" font-size="12" font-weight="600" fill="#fca5a5">Deep learning</text>
+
+  <!-- connectors -->
+  <g stroke="#334155" stroke-width="2.5" fill="none">
+    <path id="c_a" d="M200,247 L224,247"/>
+    <path id="c_b" d="M384,247 C396,247 396,172 408,172"/>
+    <path id="c_c" d="M384,247 C396,247 396,322 408,322"/>
+    <path id="c_d" d="M568,172 L592,172"/>
+    <path id="c_e" d="M568,322 L592,322"/>
+    <path id="c_f" d="M752,322 L776,322"/>
+    <path id="c_g" d="M752,172 C860,172 860,247 960,247"/>
+    <path id="c_h" d="M936,322 C948,322 948,247 960,247"/>
+    <path id="c_i" d="M1120,247 L1144,247"/>
+  </g>
+
+  <!-- data packets -->
+  <g fill="#facc15">
+    <circle r="5"><animateMotion dur="1.2s" repeatCount="indefinite" begin="0s" path="M200,247 L224,247"/></circle>
+    <circle r="5"><animateMotion dur="1.2s" repeatCount="indefinite" begin="0.4s" path="M384,247 C396,247 396,172 408,172"/></circle>
+    <circle r="5"><animateMotion dur="1.2s" repeatCount="indefinite" begin="0.4s" path="M384,247 C396,247 396,322 408,322"/></circle>
+    <circle r="5"><animateMotion dur="1.2s" repeatCount="indefinite" begin="0.8s" path="M568,172 L592,172"/></circle>
+    <circle r="5"><animateMotion dur="1.2s" repeatCount="indefinite" begin="0.8s" path="M568,322 L592,322"/></circle>
+    <circle r="5"><animateMotion dur="1.2s" repeatCount="indefinite" begin="1.2s" path="M752,322 L776,322"/></circle>
+    <circle r="5"><animateMotion dur="1.2s" repeatCount="indefinite" begin="1.2s" path="M752,172 C860,172 860,247 960,247"/></circle>
+    <circle r="5"><animateMotion dur="1.2s" repeatCount="indefinite" begin="1.6s" path="M936,322 C948,322 948,247 960,247"/></circle>
+    <circle r="5"><animateMotion dur="1.2s" repeatCount="indefinite" begin="2.0s" path="M1120,247 L1144,247"/></circle>
+  </g>
+
+  <!-- User input -->
+  <g>
+    <rect x="40" y="205" width="160" height="84" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+    <rect x="176" y="217" width="12" height="6" rx="2" fill="#38bdf8"><animate attributeName="height" values="6;1;6" dur="3s" repeatCount="indefinite"/></rect>
+    <text x="54" y="235" font-size="14" font-weight="700" fill="#f8fafc">User input</text>
+    <text x="54" y="259" font-size="11" fill="#94a3b8">Text / URL · langdetect</text>
+  </g>
+
+  <!-- Preprocess -->
+  <g>
+    <rect x="224" y="205" width="160" height="84" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+    <rect x="360" y="217" width="12" height="6" rx="2" fill="#38bdf8"><animate attributeName="height" values="6;1;6" dur="3.4s" repeatCount="indefinite"/></rect>
+    <text x="238" y="235" font-size="14" font-weight="700" fill="#f8fafc">Preprocess</text>
+    <text x="238" y="259" font-size="11" fill="#94a3b8">Tokenize · normalize</text>
+  </g>
+
+  <!-- TF-IDF (baseline) -->
+  <g>
+    <rect x="408" y="130" width="160" height="84" rx="10" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+    <rect x="544" y="142" width="12" height="6" rx="2" fill="#a78bfa"><animate attributeName="height" values="6;1;6" dur="2.8s" repeatCount="indefinite"/></rect>
+    <text x="422" y="160" font-size="14" font-weight="700" fill="#f8fafc">TF-IDF</text>
+    <text x="422" y="184" font-size="11" fill="#94a3b8">Max 50,000 features</text>
+  </g>
+
+  <!-- XLM-RoBERTa (deep) -->
+  <g>
+    <rect x="408" y="280" width="160" height="84" rx="10" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+    <rect x="544" y="292" width="12" height="6" rx="2" fill="#a78bfa"><animate attributeName="height" values="6;1;6" dur="3.1s" repeatCount="indefinite"/></rect>
+    <text x="422" y="310" font-size="14" font-weight="700" fill="#f8fafc">XLM-RoBERTa</text>
+    <text x="422" y="334" font-size="11" fill="#94a3b8">Subword tokenization</text>
+  </g>
+
+  <!-- LinearSVC (baseline) -->
+  <g>
+    <rect x="592" y="130" width="160" height="84" rx="10" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+    <rect x="728" y="142" width="12" height="6" rx="2" fill="#a78bfa"><animate attributeName="height" values="6;1;6" dur="3.3s" repeatCount="indefinite"/></rect>
+    <text x="606" y="160" font-size="14" font-weight="700" fill="#f8fafc">LinearSVC</text>
+    <text x="606" y="184" font-size="11" fill="#94a3b8">Fake/Real + probability</text>
+  </g>
+
+  <!-- Fine-tuning (deep) -->
+  <g>
+    <rect x="592" y="280" width="160" height="84" rx="10" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+    <rect x="728" y="292" width="12" height="6" rx="2" fill="#a78bfa"><animate attributeName="height" values="6;1;6" dur="2.9s" repeatCount="indefinite"/></rect>
+    <text x="606" y="310" font-size="14" font-weight="700" fill="#f8fafc">Fine-tuning</text>
+    <text x="606" y="334" font-size="11" fill="#94a3b8">3 epochs · lr 2e-5</text>
+  </g>
+
+  <!-- Attention map (deep, explainability) -->
+  <g>
+    <rect x="776" y="280" width="160" height="84" rx="10" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+    <rect x="912" y="292" width="12" height="6" rx="2" fill="#a78bfa"><animate attributeName="height" values="6;1;6" dur="2.5s" repeatCount="indefinite"/></rect>
+    <text x="790" y="310" font-size="14" font-weight="700" fill="#f8fafc">Attention map</text>
+    <text x="790" y="334" font-size="11" fill="#94a3b8">Suspicious words (XAI)</text>
+  </g>
+
+  <!-- Ensemble -->
+  <g>
+    <rect x="960" y="205" width="160" height="84" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="2">
+      <animate attributeName="stroke-opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="1096" y="217" width="12" height="6" rx="2" fill="#38bdf8"><animate attributeName="height" values="6;1;6" dur="2.6s" repeatCount="indefinite"/></rect>
+    <text x="974" y="235" font-size="14" font-weight="700" fill="#f8fafc">Ensemble</text>
+    <text x="974" y="259" font-size="11" fill="#94a3b8">Average of scores</text>
+  </g>
+
+  <!-- Final output -->
+  <g>
+    <rect x="1144" y="205" width="160" height="84" rx="10" fill="#052e16" stroke="#22c55e" stroke-width="2">
+      <animate attributeName="stroke-opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="1280" y="217" width="12" height="6" rx="2" fill="#22c55e"><animate attributeName="height" values="6;1;6" dur="3.3s" repeatCount="indefinite"/></rect>
+    <text x="1158" y="235" font-size="14" font-weight="700" fill="#f8fafc">Final output</text>
+    <text x="1158" y="259" font-size="11" fill="#86efac">FAKE/REAL + confidence</text>
+  </g>
+
+  <!-- footer -->
+  <line x1="44" y1="400" x2="1300" y2="400" stroke="#1e293b" stroke-width="1"/>
+  <text x="44" y="424" font-size="12" fill="#94a3b8">Sources: Kaggle Bangla-English fake news dataset · pretrained XLM-RoBERTa</text>
+  <text x="44" y="444" font-size="12" fill="#94a3b8">Evaluation: Accuracy · F1 · Precision · Recall · Confusion Matrix</text>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo2MWVmYzYwOS1lNjE4LTRhMGEtYTc2YS00ZTM3NjhlMWU1YmUAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaFxyasAzGgHbCqWMKQTELhsAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpmMmNkNTk0Ni0wZTJmLTRjZGItOTYxNy1mMTRhODc3NDM3NGNscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoSVgl4CrjQgCa1ShxtC3+AAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg/Ick9CTP02tEn1lkruGjE+B1gyEFYRl+fSaxz7wQ48KkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaO9fgfv1B8nlPBaUqfk0YboAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYICeLiosj5nnEcHIjYaRHiGbTV8s9HpZj9tPd/Q8NNNs4ZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GR8fZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjYxZWZjNjA5LWU2MTgtNGEwYS1hNzZhLTRlMzc2OGUxZTViZS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmViNTcyNDE3LTVhZGItNDY2Yi1iMzgwLTgzNDNiNGZlY2QyY3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCD8hyT0JM/Ta0SfWWSu4aMT4HWDIQVhGX59JrHPvBDjwqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg1bxQUbFMwyVyG8/qbOWnJpxeIC2aRBsGL1MoxmiemK2iY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggDLBeLQsR9HL9Q33Jl96UCTG5z78nFj4nHb0IghkwuEF0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQCc1FYV6TQUv5j4jhrlikmS7LoQNwRfvt9JV9kThPHQHkjmg6HPSenZtTNHbcbx0fYQLJkzxRuK+Z/W9YNc2e6A=</c2pa:manifest></metadata></svg>
