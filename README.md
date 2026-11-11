@@ -5,30 +5,11 @@ A hybrid machine learning and deep learning system that classifies news articles
 **Authors:** Alif Mahmud Talha
 **Affiliation:** Department of Computer Science and Engineering, University of Asia Pacific (UAP), Dhaka
 
+## How it works
+
 ![Pipeline](./fake_news_full_pipeline.svg)
 
----
 
-## Table of Contents
-
-- [Motivation](#motivation)
-- [Objectives](#objectives)
-- [Scope](#scope)
-- [Dataset](#dataset)
-- [Preprocessing](#preprocessing)
-- [System Design](#system-design)
-- [Models](#models)
-- [Ensemble](#ensemble)
-- [Explainable AI](#explainable-ai)
-- [Results](#results)
-- [Limitations](#limitations)
-- [Tech Stack](#tech-stack)
-- [Repository Contents](#repository-contents)
-- [Getting Started](#getting-started)
-- [Future Work](#future-work)
-- [References](#references)
-
----
 
 ## Motivation
 
